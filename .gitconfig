@@ -1,0 +1,46 @@
+#GiT definitions, aliases and shortcuts
+
+[color]
+    ui = auto
+[user]
+    name  = Yehuda Tsimanis
+    email = yehuda.tsimanis@gmail.com
+[diff]
+    external = ~/Scripts/bash/git-diff-wrapper.sh
+
+[merge]
+    #tool = <define vimdiff to be the one>
+
+[mergetool "diffconflicts.sh"]
+    cmd           = <define vimdiff to be the one> vim "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+    trustExitCode = true
+    keepBackup    = false
+
+[log]
+    decorate = full 
+
+[core]
+    editor   = "gvim -geometry 97x46+413+145 -w"
+
+[alias]
+	co        = checkout
+	st        = status
+	ci        = commit
+	br        = branch
+	cp        = cherry-pick
+	lol       = log --oneline
+   last      = log -1 HEAD --stat
+   gr        = grep -n
+	unstage   = reset HEAD --
+	pull-sync = !git tag current && git add -A && git commit --allow-empty -m WIP && git cherry-pick sync && git reset current && git tag -d current
+	unamend   = !sh -c "A=`git reflog --decorate=no | grep -A 1 amend | head -n 2 | cut -d' ' -f 2 | cut -d':' -f 1 | head -n 1` && git reset --hard $A && B=`git reflog --decorate=no | grep -A 1 amend | head -n 2 | cut -d' ' -f 2 | cut -d':' -f 1 | tail -n 1` && git reset --soft $B && git status"
+	fixup = !sh -c 'REV=$(git rev-parse $1) && git commit --fixup $@ && git stash save FIXUP_STASH && GIT_SEQUENCE_EDITOR=true git rebase -i --autosquash $REV^ && ( ( git stash list | head -n 1 | grep FIXUP_STASH ) && git stash pop ) ' -
+	squash    = !sh -c 'REV=$(git rev-parse $1) && git commit --squash $@ && git stash && git rebase -i --autosquash $REV^ && git stash pop' -
+	ctags     = !.git/hooks/ctags
+[init]
+    templatedir = ~/.git_template
+[grep]
+    extendRegexp = true
+    lineNumber = true
+[gui]
+    recentrepo = /Users/YT
