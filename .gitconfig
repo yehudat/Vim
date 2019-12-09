@@ -20,7 +20,7 @@
     decorate = full 
 
 [core]
-    editor   = "gvim -geometry 97x46+413+145 -w"
+    editor   = gvim
 
 [alias]
 	co        = checkout
