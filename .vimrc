@@ -57,7 +57,7 @@ set encoding=utf-8
 """""""""""""""""""""""""""""""""""""
 set nocompatible " be iMproved, required
 filetype off     " required
-let mapleader = " "
+let mapleader = "\<Space>"
 
 if has('gui_running')
     "Removes windows to pop-up and removes the RHS scroll bar
@@ -300,10 +300,6 @@ if &diff
    "highlight DiffChange gui=none guifg=NONE    guibg=#e5d5ac
    "highlight DiffDelete gui=bold guifg=#ff8080 guibg=#ffb0b0
    "highlight DiffText   gui=none guifg=NONE    guibg=#8cbee2
-
-   "Ignore white spaces in GVIM diff tool
-   nnoremap <Leader>iw  :set diffopt+=iwhite<CR>
-   nnoremap <Leader>ic  :set diffopt+=icase<CR>
 else
    """""""""""""setup for REGULAR GVIM mode"""""""""""""
    " Window size and shape
@@ -375,6 +371,11 @@ autocmd GUIEnter * set visualbell t_vb=
 autocmd InsertLeave * update
 
 """"""""""""""""""""""General mappings""""""""""""""""""""""
+"Ignore white spaces and upper/lower case in the diff tool. It's not 
+"under 'if &diff', as it doesn't work w/ Gdiff, if loaded later. 
+nnoremap <Leader>iw :set diffopt+=iwhite<CR>
+nnoremap <Leader>ic :set diffopt+=icase<CR>
+
 " Change dir to the one of the current file
 nnoremap <Leader>cd :cd %:p:h<CR>:pwd<CR>
 
