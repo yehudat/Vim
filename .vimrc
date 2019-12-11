@@ -352,11 +352,8 @@ set nocin
 set nowrap
 set textwidth=0     " don't break lines w/ a new line after passing beyond certain line width
 
-"|||| Both of the features below mess up with other functionalities of VIM |||||"
-" Auto Change Directory
-"set autochdir
-" Autochange directory on entering a buffer (works better then the latter)
-" autocmd BufEnter * silent! lcd %:p:h
+"Applies the JavaScript syntax on GAS (Google Apps Script)
+autocmd BufNewFile,BufRead *.gs set filetype=javascript
 
 set wb
 set nosol
