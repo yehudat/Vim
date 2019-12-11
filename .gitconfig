@@ -6,7 +6,7 @@
     name  = Yehuda Tsimanis
     email = yehuda.tsimanis@gmail.com
 [diff]
-    external = ~/Scripts/bash/git-diff-wrapper.sh
+    external = ~/Scripts/bash/git_diff_wrapper.sh
 
 [merge]
     #tool = <define vimdiff to be the one>
