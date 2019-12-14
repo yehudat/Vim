@@ -102,8 +102,7 @@ if has('gui_running')
     Plugin 'Yggdroot/indentLine'             " https://github.com/Yggdroot/indentLine   :IndentLinesToggle
     Plugin 'michaeljsmith/vim-indent-object' " Text-object recognition of indented objects
     Plugin 'tpope/vim-surround'              " Cmd structure: {y,c,d}s<text-object>
-    "Plugin 'Valloric/YouCompleteMe'          "https://github.com/Valloric/YouCompleteMe Installation: cd ~/.vim/bundle/YouCompleteMe; install.py --clang-completer
-    "Plugin 'vim-syntastic/syntastic'         "https://github.com/vim-syntastic/syntastic
+    Plugin 'Valloric/YouCompleteMe'          "https://github.com/Valloric/YouCompleteMe Installation: cd ~/.vim/bundle/YouCompleteMe; install.py --clang-completer
     Plugin 'ryanoasis/vim-devicons'          "Always should be the last plugin
 
     call vundle#end()                        " required
