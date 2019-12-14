@@ -59,6 +59,8 @@ set nocompatible " be iMproved, required
 filetype off     " required
 let mapleader = "\<Space>"
 
+set guifont=DejaVuSansMonoNerdFontComplete-Book:h12
+
 if has('gui_running')
     "Removes windows to pop-up and removes the RHS scroll bar
     set guioptions+=lrbmTLce
@@ -102,6 +104,7 @@ if has('gui_running')
     Plugin 'tpope/vim-surround'              " Cmd structure: {y,c,d}s<text-object>
     "Plugin 'Valloric/YouCompleteMe'          "https://github.com/Valloric/YouCompleteMe Installation: cd ~/.vim/bundle/YouCompleteMe; install.py --clang-completer
     "Plugin 'vim-syntastic/syntastic'         "https://github.com/vim-syntastic/syntastic
+    Plugin 'ryanoasis/vim-devicons'          "Always should be the last plugin
 
     call vundle#end()                        " required
 
@@ -290,7 +293,7 @@ if &diff
 
     syntax off
 
-    set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 13
+    "set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 13
 
     " Window size and shapeo
     set lines=90
@@ -321,7 +324,7 @@ else
        colorscheme slate
    endif
 
-   set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 13
+   "set guifont=DejaVu\ Sans\ Mono\ for\ Powerline\ 13
 
    "Hidden characters :set list/nolist for showing/hiding the hidden characters
    highlight NonText ctermfg=239 guifg=gray25
