@@ -20,7 +20,7 @@
     decorate = full 
 
 [core]
-    editor   = gvim
+    editor   = gvim -f
 
 [alias]
 	co        = checkout
