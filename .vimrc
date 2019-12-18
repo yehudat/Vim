@@ -148,8 +148,8 @@ if has('gui_running')
     let g:gitgutter_map_keys  = 0
     set updatetime=250
     " maps next/previous hunk of Git related code to ]h & [h
-    nmap ]h <Plug>GitGutterNextHunk
-    nmap [h <Plug>GitGutterPrevHunk
+    nmap ]h <Plug>(GitGutterNextHunk)
+    nmap [h <Plug>(GitGutterPrevHunk)
     " maps preview/stage/undo
     nmap <Leader>ha <Plug>GitGutterStageHunk
     nmap <Leader>hr <Plug>GitGutterUndoHunk
