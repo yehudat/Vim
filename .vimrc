@@ -104,6 +104,7 @@ if has('gui_running')
     Plugin 'tpope/vim-surround'              " Cmd structure: {y,c,d}s<text-object>
     Plugin 'Valloric/YouCompleteMe'          "https://github.com/Valloric/YouCompleteMe Installation: cd ~/.vim/bundle/YouCompleteMe; install.py --clang-completer
     Plugin 'ryanoasis/vim-devicons'          "Always should be the last plugin
+    "Plugin 'terryma/vim-multiple-cursors'   "https://vimawesome.com/plugin/vim-multiple-cursors#installation
 
     call vundle#end()                        " required
 
